@@ -9,7 +9,7 @@ function EmployeeInfo(employeeID,fullName,Department,level,imageURL){
 }
 EmployeeInfo.prototype.randomSalary =function (min , max) {
 let randomValue=Math.floor(Math.random() * (max - min) ) + min;
-let netSalary=randomValue -(randomValue + (7.5/100));
+let netSalary=randomValue -(randomValue * (7.5/100));
 this.salary=netSalary;
     return netSalary ;
    
@@ -28,15 +28,20 @@ Lana.render();
 
 let Tamara =new EmployeeInfo (1002,"Tamara Ayoub","Marketing","Senior","");
 Tamara.randomSalary(1500,2000);
+Tamara.render();
 
  let Safi =new EmployeeInfo (1003,"Safi Walid","Administration","Mid-Senior","");
  Safi.randomSalary(1000,1500);
- 
+ Safi.render();
+
 let Omar =new EmployeeInfo (1004,"Omar Zaid","Development","Senior","");
 Omar.randomSalary(1500,2000);
+Omar.render();
 
  let Rana =new EmployeeInfo (1005,"Rana Saleh","Development","Junior","");
  Rana.randomSalary(	500	,1000);
+Rana.render();
 
 let Hadi =new EmployeeInfo (1006,"Hadi Ahmad","Finance","Mid-Senior","");
 Hadi.randomSalary(	1000,1500);
+Hadi.render();
