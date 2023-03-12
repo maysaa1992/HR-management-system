@@ -4,15 +4,7 @@ let main = document.getElementsByTagName("main");
 let form = document.getElementById("empForm");
 let select1 = document.getElementById("Department1");
 let select2 = document.getElementById("Level1");
-let section1 =document.getElementById("sec1")
-let section2 =document.getElementById("sec2")
-let section3 =document.getElementById("sec3")
-let section4 =document.getElementById("sec4")
-let section5 =document.getElementById("sec5")
-let section6 =document.getElementById("sec6")
-let section7 =document.getElementById("sec7")
-const secArray=[section1,section2,section3,section4,section5,section6,section7];
-var creat =0;
+let section =document.getElementById("sec");
 
 //let division1 =document.getElementById("div1")
 var id = 1000;
@@ -48,28 +40,42 @@ this.salary = netSalary;
    this.salary = netSalary;
        }
 }
-EmployeeInfo.prototype.render=function(indexVal){
+EmployeeInfo.prototype.render=function(){
 
-  // let section1 =document.createElement('sec').style="background-color: #477C37; display:flex; width:30%; flex-direction: column; align-items: center; border-radius:5%; ";
-  // body[0].appendChild(section1);
+let division =document.createElement('div');
+division.style.width="300px";
+division.style.height="360px";
+ division.style.backgroundColor="#569344"; 
+ division.style.margin="50px"
+ division.style.borderRadius="3%"
+division.style.display="flex";
+ division.style.flexDirection="column" ;
+division.style.aligncontent= "flex-end";
+division.style.alignItems="center";
+division.style.paddingTop="30px"
 
-let imgEL = document.createElement('img');
+section.appendChild(division);
+
+let imgEL=document.createElement("img");
 imgEL.src= this.imageURL;
-secArray[indexVal].appendChild(imgEL).width=250;
-secArray[indexVal].appendChild(imgEL).height=250;
-secArray[indexVal].appendChild(imgEL);
+division.appendChild(imgEL);
+division.appendChild(imgEL).width=250;
+division.appendChild(imgEL).height=250;
+
 
 let parEL1 = document.createElement('p');
 parEL1.textContent=`Name :${this.fullName}-ID:${this.employeeID}`
-secArray[indexVal].appendChild(parEL1);
+division.appendChild(parEL1);
 
 let parEL2 = document.createElement('p');
+parEL2.style.marginTop="0";
 parEL2.textContent=`Department: ${this.Department}-Level: ${this.level}`
-secArray[indexVal].appendChild(parEL2);
+division.appendChild(parEL2);
 
 let parEL3 = document.createElement('p');
+parEL3.style.marginTop="0";
 parEL3.textContent=` ${this.salary}`
-secArray[indexVal].appendChild(parEL3);
+division.appendChild(parEL3);
 
 
 }
@@ -95,8 +101,8 @@ function submitHandeler(event){
   }
 let newEmployee = new EmployeeInfo(creatId(),empName , depName , empLevel , imgUrll )
 newEmployee.randomSalary();
-newEmployee.render(creat);
-creat +=1;
+newEmployee.render();
+
 }
 // creatSection() 
 // {
