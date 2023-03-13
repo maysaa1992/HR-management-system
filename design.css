@@ -1,0 +1,25 @@
+#sec{
+    width: 100%;
+     height:100% ; 
+     display:flex ;
+     flex-wrap:wrap;
+}
+footer{
+    display: flex;
+    margin-top:50%;
+    height: 30px; 
+    background-color:#9cbfe5;
+    background-size:50px;
+    align-items: center;
+    align-content: flex-end;
+    align-content: center;
+    }
+    header{
+        display: flex;
+        align-items: center;
+        height: 30px;
+        background-color:#9cbfe5 ;
+    }
+    #pfooter{
+        padding-left: 500px;
+    }
