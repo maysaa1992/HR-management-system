@@ -5,16 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      sec-card {
+        width: 100px;
+        height: 100px;
+        
+      }
+    </style>
 </head>
 <body>
-  <header>
-<nav>
+  <header style="  display: flex;
+  align-items: center;
+  height: 30px;
+  background-color:#9cbfe5 ;">
+<nav >
     <ul>
-        <li> <a href ="./accounting.html">Accounting page </a></li>
+        <li style="display: inline-block;
+        padding-left: 300px;"></li> <a style="  text-decoration: none;
+        " href ="./accounting.html">Accounting page </a></li>
     </ul>
 </nav>
   </header>  
+
   <main>
+    <h1>Employee Information</h1>
+    <form id="empForm">
+      <label for="fullName">fullName:</label>
+      <input type="text" id="fullName" value=""  >
+      <br><br>
+    <label for="Department1">Department </label>
+    <select id="Department1" name="Departmentlist" form="Departmentform">
+      <option value="Administration" > Administration </option>
+      <option value="Marketing">Marketing</option>
+      <option value="Finance">Finance</option>
+    </select> 
+    <br><br>
+    <label for="Level1">Level </label>
+    <select id="Level1" name="Levellist" form="Levelform">
+      <option value="Junior">Junior</option>
+      <option value="Mid-Senior">Mid-Senior</option>
+      <option value="Senior">Senior</option>
+    </select>
+    <br><br>
+    <label for="imgurl">Image url </label>
+    <input type="text" id ="imgurl" value="">
+    <br><br>
+    <input type="submit" value="submit">
+    </form><br>
+    <section id="sec" style="width: 100%; height:100% ">
+
+    </section>
+    <br><br>
+  
+    <br><br>
+
+   
  <!-- <table id="tjs" style="  border-collapse: collapse;
 width: 70%;
 height:50%;
@@ -35,17 +80,16 @@ margin-top: 200px;
 </table>  -->
   </main>
   <footer style="
-  margin-top: 800px;
-  padding-left: 500px;
+  display: flex;
+  margin-top:50%;
+  height: 30px; 
   background-color:#9cbfe5;
   background-size:50px;
-  position:fixed;
-  bottom:0;
-  display: flex;
-  height: 40px;
-  width:100%">
-  
-<p> &copy;<a href="https://web.facebook.com/?_rdc=1&_rdr" >www.facebook.com </a></p>
+  align-items: center;
+  align-content: flex-end;
+
+  align-content: center;">
+<p style="padding-left: 500px;" > &copy;<a href="https://web.facebook.com/?_rdc=1&_rdr" >www.facebook.com </a></p>
   </footer> 
   <script src="./app.js"></script>
 </body>
